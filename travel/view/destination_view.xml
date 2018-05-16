@@ -32,7 +32,7 @@
 		<field name="model">travel.places</field>
 		<field name="arch" type="xml">
 			<tree>
-				<field name="name" string="Places"/>
+				<field name="name" string="Placess"/>
 				<field name="code" string="Place Codes"/>
 			</tree>
 		</field>
