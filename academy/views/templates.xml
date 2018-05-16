@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <template id="index">
+      <t t-call="website.layout">
+        <t t-set="title">Academy</t>
+        <div class="oe_structure">
+          <div class="container">
+            <section id="forms">
+              <i id="reference-views-form">
+              </i>
+              <h2>Forms</h2>
+              <p>Form views are used to display the data from a single record. Their rootelement is <code>&lt;form&gt;</code>. They are composed of regular <a href="http://en.wikipedia.org/wiki/HTML" class="external reference">HTML</a> with additionalstructural and semantic components.</p>
+            </section>
+            <t t-foreach="teachers" t-as="teacher">
+              <p>
+                <t t-esc="teacher"/>
+              </p>
+            </t>
+          </div>
+        </div>
+      </t>
+    </template>
+    <!-- <template id="listing"> -->
+    <!--   <ul> -->
+    <!--     <li t-foreach="objects" t-as="object"> -->
+    <!--       <a t-attf-href="#{ root }/objects/#{ object.id }"> -->
+    <!--         <t t-esc="object.display_name"/> -->
+    <!--       </a> -->
+    <!--     </li> -->
+    <!--   </ul> -->
+    <!-- </template> -->
+    <!-- <template id="object"> -->
+    <!--   <h1>
+    <t t-esc="object.display_name"/>
+  </h1> -->
+  <!--   <dl> -->
+  <!--     <t t-foreach="object._fields" t-as="field"> -->
+  <!--       <dt>
+  <t t-esc="field"/>
+</dt> -->
+<!--       <dd>
+<t t-esc="object[field]"/>
+</dd> -->
+<!--     </t> -->
+<!--   </dl> -->
+<!-- </template> -->
+</data>
+</odoo>
