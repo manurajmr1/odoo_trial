@@ -9,7 +9,7 @@
 			<form>
 				<sheet>
 					<group string="Place">
-						<field name="name" string="Place" help="Enter the place" required="True"/>
+						<field name="name" string="Placesd" help="Enter the place" required="True"/>
 						<field name="code" string="Place Code" help="Enter the place code" required="True"/>
 					</group>
 				</sheet>
