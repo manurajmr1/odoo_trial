@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo>
+<data>
+    <!-- Top bar menu -->
+    <menuitem id="menu_travel_management" name="Travel Management"/>
+        <!-- Left Sidebar MenuHead-->
+        <menuitem id="travel_config_menu" name="Configuration" parent="menu_travel_management" sequence="30"/>
+            <menuitem id="menu_places" parent="travel_config_menu" action="action_travel_management_places" sequence="10"/>
+            <menuitem id="meals_places" parent="travel_config_menu" action="action_travel_management_meals" sequence="11"/>
+</data>
+</odoo>

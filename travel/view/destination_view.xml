@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<odoo>
+<data>
+	<!--form view-->
+	<record id="travel_places_form" model="ir.ui.view">
+		<field name="name">travel.Places.form</field>
+		<field name="model">travel.places</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group string="Place">
+						<field name="name" string="Place" help="Enter the place" required="True"/>
+						<field name="code" string="Place Code" help="Enter the place code" required="True"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<!--search view-->
+	<record id="travel_places_search" model="ir.ui.view">
+		<field name="name">travel.places.search</field>
+		<field name="model">travel.places</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="code" string="Places" filter_domain="[('code','ilike',self)]"/>
+			</search>
+		</field>
+	</record>
+	<!--tree view-->
+	<record id="travel_places_tree" model="ir.ui.view">
+		<field name="name">travel.places.tree</field>
+		<field name="model">travel.places</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name" string="Place"/>
+				<field name="code" string="Place Code"/>
+			</tree>
+		</field>
+	</record>
+	<!--sequence view-->
+	<record id="travel_places_sequence" model="ir.sequence">
+		<field name="code">travel.places</field>
+		<field name="name">TD</field>
+		<field name="prefix">DES</field>
+		<field name="padding">5</field>
+	</record>
+	<!-- Action for Travel places-->
+	<record id="action_travel_management_places" model="ir.actions.act_window">
+		<field name="name">Places</field>
+		<field name="res_model">travel.places</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<!-- Action for Travel places-->
+	<record id="action_travel_management_meals" model="ir.actions.act_window">
+		<field name="name">Meals</field>
+		<field name="res_model">travel.meals</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<!--tree view-->
+	<record id="travel_places_meals_tree" model="ir.ui.view">
+		<field name="name">travel.meals.tree</field>
+		<field name="model">travel.meals</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name" string="Meal"/>
+				<field name="meal_date" string="Meal Date"/>
+				<field name="user_id" string="User"/>
+			</tree>
+		</field>
+	</record>
+</data>
+</odoo>
