@@ -11,6 +11,7 @@
     'depends': ['base'],
     'data': [
         'view/destination_view.xml',
+	'security/ir.model.access.csv',
         'menu/travel_management_menu.xml',
                  ],
     'installable': True,
